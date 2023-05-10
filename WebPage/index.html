@@ -1,1 +1,104 @@
-ghjghjefj
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cooper-Hunter | Home Page</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+       <div class="header" style="height: 100vh;">
+        <!---------menu------------>
+            <div class="menu">
+                <span style="font-size: 45px; cursor: pointer; margin-left: 10px; " onclick="openNav()">&#9776;</span>
+                <nav id="mySidenav" class="sidenav"> 
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    </ul>
+               <nav>
+            </div>    
+       </div>
+       <!--------content---------->
+       <div class="container">
+        <h2 class="title">Клима уреди со врвна инвертерска технологија</h2>
+        <br>
+        <div class="row">
+            <div class="col-2">
+                <p>Во производната програма на Cooper & Hunter ја има целата 
+                палета на клима уреди со врвна инвертерска технологија: Сплит 
+                системи, мултисплит, VRV, рекуператори на топлина, топлински 
+                пумпи воздух-вода во сплит изведба, кои работат ефикасно до -20 ˚С,
+                топлински пумпи воздух-вода наменети само за греење, со подготовка 
+                на вода до 60˚С, кои работат до –26˚С, одвлажнувачи. Производите се дизајнирани за работа при ниски надворешни температури 
+                до -30˚С и се најпродаван докажан бренд во Северна Америка, Канада и 
+                Северна Европа. WI-FI конекција и управување преку мобилен телефон од 
+                било која локација со Интернет пристап. Енергетска класа при ладење и 
+                греење до А+++. </p>
+            </div>
+            <div class="col-2">
+                <img src="air-conditioner.jpg">
+            </div>
+        </div>
+       </div>
+       
+       <div class="container">
+        <h2 class="title">Палета на клима уреди</h2>
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="product1.jpg">
+                    </div>
+                    <div class="col-3">
+                        <img src="product2.jpg">
+                    </div>
+                    <div class="col-3">
+                        <img src="product3.jpg">
+                    </div>
+                 <small style="text-align: center; color: #555;"><i>Mini Split Heat Pump Air Conditioner System</i></small> 
+                </div>
+            </div>
+       </div>
+
+       <div class="technology">
+        <div class="small-container">
+            <div class="features">
+                <p><i>Производите се дизајнирани за работа при ниски надворешни температури 
+                    до -30˚С и се најпродаван докажан бренд во Северна Америка, Канада и 
+                    Северна Европа.</i>
+                </p>
+                <br>
+                <hr>
+                <br>
+                <p><i>Иновативните двостепени компресори ја овозможуваат нивната 
+                    ефикасна работа во режим на греење и на -30 ˚С.</i>
+                </p>
+                <br>
+                <hr>
+                <br>
+                <p><i>WI-FI конекција и управување преку мобилен телефон од било која 
+                    локација со Интернет пристап.</i></p>
+            </div>
+        
+        </div>
+       </div>
+
+      
+    <!----------script---------->
+    <script>
+        function openNav(){
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        function closeNav(){
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+        
+
+    </body>
+</html>
