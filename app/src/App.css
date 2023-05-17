@@ -3,11 +3,15 @@
 }
 body{
   margin: 0;
+  padding: 0;
+  font-family: "Poppins";
 }
+
 .container{
-  margin: 1rem;
+
   text-align: center;
 }
+/*Navbar*/
 .nav{
   background-color: 	#D3D3D3;
   color:black;
@@ -42,4 +46,45 @@ padding: .25rem;
 }
 .nav li:hover{
   background-color: grey;
+}
+
+form{
+  display: block;
+  background-color: #fff;
+  box-shadow:1px 1px 3px 2px #ddd ;
+  margin:  auto;
+  width: 400px;
+  height: auto;
+  padding:auto;
+}
+form input,textarea{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 15px auto;
+  padding: 10px;
+  font-family: "Poppins";
+  background-color: #f3f3f3;
+border:1px solid #ddd;
+border-radius: 8px;
+}
+
+form span{
+color:royalblue;
+}
+
+form button{
+  height: 30px;
+  width: 75px;
+  align-items: center;
+  border: none;
+  background-color:royalblue;
+  color: wheat;
+  cursor: pointer;
+}
+.contact{
+ 
+  background-color: rgb(38, 67, 154);
+  width: 100%;
+  height: 100%;
 }
