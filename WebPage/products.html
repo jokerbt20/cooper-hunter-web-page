@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cooper-Hunter | Product Page</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+       <div class="header">
+        <!---------menu------------>
+            <div class="menu">
+                <span style="font-size: 45px; cursor: pointer; margin-left: 10px; " onclick="openNav()">&#9776;</span>
+                <nav id="mySidenav" class="sidenav"> 
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <ul>
+                    <li><a href="index.html">Дома</a></li>
+                    <li><a href="products.html">Продукти</a></li>
+                    <li><a href="about.html">За нас</a></li>
+                    <li><a href="contact.html">Контакт</a></li>
+                    </ul>
+               <nav>
+            </div>    
+       </div>
+       <div class="container">
+        <h2 class="title">Продукти</h2>
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="../Documents/WebPage/Products/Arctic NG Series/ezgif-2-4e92e8d090.jpg" height="180px">
+                    <p style="text-align: center; color: #555;">Цена: 17.990 ден.</p>
+                   <button style="width: 50%;" class="btn2">Повеќе</button><button style="width: 50%;" class="btn2">Нарачај</button>
+                </div>
+                <div class="col-3">
+                    <img src="../Documents/WebPage/Products/Arctic NG Series/ezgif-2-8434776e41.jpg">
+                    <p style="text-align: center; color: #555;">Цена: 18.990 ден.</p>
+                    <button style="width: 50%;" class="btn2">Повеќе</button><button style="width: 50%;" class="btn2">Нарачај</button>
+                </div>
+                <div class="col-3">
+                    <img src="../Documents//WebPage/Products/Arctic NG Series/alpha-ng.png">
+                    <p style="text-align: center; color: #555;">Цена: 19.990 ден.</p>
+                    <button style="width: 50%;" class="btn2">Повеќе</button><button style="width: 50%;" class="btn2">Нарачај</button>
+                </div>
+             <small style="text-align: center; color: #555;"><i>Artic NG Series (ALPHA)</i></small> 
+            </div>
+        </div>
+       </div>
+
+
+       <script>
+        function openNav(){
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        function closeNav(){
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+    </script>
+    </body>
+
+</html>

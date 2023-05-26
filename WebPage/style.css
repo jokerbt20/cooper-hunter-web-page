@@ -11,12 +11,18 @@ body{
 
 .header{
     background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(../Documents/WebPage/banner.jpg);
     background-size: cover;
     background-position:center;
-   
+    height: 40vh;
+    width: 100%;
+    position: relative;
+    
 }
+
+
+
 /*---------menu----------*/
 .sidenav {
     height: 100%;
@@ -251,6 +257,26 @@ body{
 .copyright{
     text-align: center;
 }
+
+/*-----------products-----------*/
+.btn2{
+    background: #004B91;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background 0.5s;
+}
+.btn2:last-child{
+    background: #1C85E7;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background 0.5s;
+}
+.btn2:hover{
+    background: #ff2007;
+}
+
 
 
 
