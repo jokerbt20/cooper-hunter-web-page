@@ -18,36 +18,63 @@ body{
    
 }
 /*---------menu----------*/
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700');
+*{
+    margin: 0;
+    padding: 0;
+}
+.menu{
+    padding: 80px 20px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.menu-1, .menu-5{
+    background: darkblue;
+}
+
+
+.menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.menu li{
+    display: inline-block;
+    margin: 0 15px;
+}
+.menu a{
+    font-size: 22px;
+    text-transform: uppercase;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+    color: #fff;
     display: block;
-    transition: 0.3s;
-  }
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-  .sidenav .closebtn {
+    position: relative;
+    padding: 4px 0;
+}
+.menu a::before{
+    content: "";
+    width: 100%;
+    height: 4px;
     position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    transition: 0.5s transform ease;
+    transform: scale3d(0,1,1);
+    transform-origin: 0 50%;
+}
+.menu a:hover::before{
+    transform: scale3d(1,1,1);
+}
+
+.menu-5 a::before{
+    background: #E91E63;
+    transform-origin: 0 50%;
+}
+.menu-5 a:hover::before{
+    transform-origin: 100% 50%;
+}
   /*----------content---------*/
   .container{
     max-width: 1300px;
