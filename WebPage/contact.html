@@ -1,40 +1,47 @@
-<!DOCTYPE html>
+
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cooper-Hunter | Contact Page</title>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-       <div class="header">
-        <!---------menu------------>
-            <div class="menu">
-                <span style="font-size: 45px; cursor: pointer; margin-left: 10px; " onclick="openNav()">&#9776;</span>
-                <nav id="mySidenav" class="sidenav"> 
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <ul>
-                        <li><a href="index.html">Дома</a></li>
-                        <li><a href="products.html">Продукти</a></li>
-                        <li><a href="about.html">За нас</a></li>
-                        <li><a href="contact.html">Контакт</a></li>
-                    </ul>
-               <nav>
-            </div>    
-       </div>
-       <div class="container">
-            <h2 class="title">Контакт</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контактирај не</title>
+    <link rel="stylesheet" type="text/css" href="contact.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-box">
+            <div class="left">
+                <img src="logo.jpeg" class="sl"/>
+            </div>
+            <div class="right">
+                <h1>Контактирај не овде</h1>
+                <div class="form">
+                    <input type="text" class="field" id="name" placeholder="Име: ">
+                <input type="text" class="field" id="surname" placeholder="Презиме: ">
+                <input type="email" class="field" id="email" placeholder="Е-маил: ">
+                <input type="text" class="field" id="phone" placeholder="Телефон: ">
+                <textarea type="text" class="field" id="message" placeholder="Остави порака: "></textarea>
+                <button class="btn" id="submit">Прати</button>
+                </div>
+                
+            </div>
+            <script src="https://smtpjs.com/v3/smtp.js">
+                </script>
+                <script>
+                    Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "anajovcevska7@gmail.com",
+            Password : "F93CD9AFB8FBC5A4967EF3E72612485B771A",
+            To : 'anagogo@live.co.uk',
+            From : document.getElementById('email').value,
+            Subject : "This is the subject",
+            Body : "And this is the body"
+            }).then(
+            message => alert(message)
+            );
+                </script>
+          </script>
         </div>
-
-       <script>
-        function openNav(){
-            document.getElementById("mySidenav").style.width = "250px";
-        }
-        function closeNav(){
-            document.getElementById("mySidenav").style.width = "0";
-        }
-
-    </script>
-    </body>
+    </div>
+</body>
 </html>
