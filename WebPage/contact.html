@@ -27,42 +27,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контактирај не</title>
     <link rel="stylesheet" type="text/css" href="contact.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("naTqsILqXE9A5wy59");
+   })();
+
+   function sendMail(){
+    var params={
+        name:document.getElementById("name").value,
+        surname:document.getElementById("surname").value,
+        email:document.getElementById("email").value,
+        phone:document.getElementById("phone").value,
+        message:document.getElementById("message").value,
+    };
+    const serviceID="service_py1gzkv";
+    const templateID="template_ir4wfkn";
+    
+    emailjs.send(serviceID,templateID,params)
+.then(
+    (res)=>{
+        document.getElementById("name").value="";
+        document.getElementById("surname").value="";
+        document.getElementById("email").value="";
+        document.getElementById("message").value="";
+        console.log(res);
+        alert("your message sent successfully");
+    }
+)
+.catch((err)=>console.log(err));
+}
+
+
+
+</script>
 </head>
 <body>
+    <div>
+        <nav class="menu menu-5">
+            <ul>
+                <li><a href="#">Дома</a></li>
+                <li><a href="#">За нас</a></li>
+                <li><a href="#">Продукти</a></li>
+                <li><a href="#">Контакт</a></li>
+            </ul>
+        </nav>
+    </div>
     <div class="container">
         <div class="container-box">
             <div class="left">
-                <img src="logo.jpeg" class="sl"/>
+                <img src="logo.jpeg" alt="slika" class="sl"/>
             </div>
             <div class="right">
-                <h1>Контактирај не овде</h1>
+                <h1>Контактирај нѐ овде</h1>
                 <div class="form">
                     <input type="text" class="field" id="name" placeholder="Име: ">
                 <input type="text" class="field" id="surname" placeholder="Презиме: ">
                 <input type="email" class="field" id="email" placeholder="Е-маил: ">
                 <input type="text" class="field" id="phone" placeholder="Телефон: ">
                 <textarea type="text" class="field" id="message" placeholder="Остави порака: "></textarea>
-                <button class="btn" id="submit">Прати</button>
-                </div>
+              
+<button class="btn" onclick="sendMail()">Прати</button>
+                
+                </div>  
                 
             </div>
-            <script src="https://smtpjs.com/v3/smtp.js">
-                </script>
-                <script>
-                    Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "anajovcevska7@gmail.com",
-            Password : "F93CD9AFB8FBC5A4967EF3E72612485B771A",
-            To : 'anagogo@live.co.uk',
-            From : document.getElementById('email').value,
-            Subject : "This is the subject",
-            Body : "And this is the body"
-            }).then(
-            message => alert(message)
-            );
-                </script>
-          </script>
+            
         </div>
     </div>
 </body>
+<footer>
+    
+</footer>
+
 </html>
