@@ -6,26 +6,58 @@
         <title>Cooper-Hunter | Home Page</title>
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="../APIs/API - Weather/script.js"></script>
     </head>
     <body>
 
-       <div class="header" style="height: 100vh;">
+       <div class="header" style="height: 30vh;">
         <!---------menu------------>
            <nav class="menu menu-5">
                <ul>
-                   <li><a href="#">Дома</a></li>
-                   <li><a href="#">За нас</a></li>
-                   <li><a href="#">Продукти</a></li>
-                   <li><a href="#">Контакт</a></li>
+                   <li><a href="index.html">Дома</a></li>
+                   <li><a href="about.html">За нас</a></li>
+                   <li><a href="products.html">Продукти</a></li>
+                   <li><a href="contact.html">Контакт</a></li>
                </ul>
            </nav>
+           <!-------API weather-------->
+           <div id="weatherContainer">
+               <div id="weatherDescription">
+                   <h1 id="cityHeader"></h1>
+                   <div id="weatherMain">
+                       <div id="temperature"></div>
+                       <div id="weatherDescriptionHeader"></div>
+                   </div>
+                   <div id="windSpeed" class="bottom-details"></div>
+                   <div id="humidity" class="bottom-details"></div>
+               </div>
 
+               <script src=".\APIs\API - Weather\script.js">
+                   if(navigator.geolocation) {
+                       navigator.geolocation.getCurrentPosition(function(position) {
+                           const lat = position.coords.latitude;
+                           const lon = position.coords.longitude;
+                           searchWeather(lat + ',' + lon);
+                       }, function(error) {
+                           // Error or user denies location, use the default location - Bitola
+                           searchWeather('Bitola, mk');
+                       });
+                   } else {
+                       // If geolocation is not supported, use the default location
+                       searchWeather('Bitola, mk');
+                   }
+
+               </script>
+           </div>
+       </div>
+           <!-------API weather-------->
            <!--------content---------->
        <div class="container">
+           <div class="left"></div>
         <h2 class="title">Клима уреди со врвна инвертерска технологија</h2>
         <br>
 
-     
+        <div id="slikaLogoIndex"> </div>
         <!--------content---------->
         <div class="container">
             <h2 class="title">Клима уреди со врвна инвертерска технологија</h2>
@@ -33,15 +65,15 @@
 
         <div class="row">
             <div class="col-2">
-                <p>Во производната програма на Cooper & Hunter ја има целата 
-                палета на клима уреди со врвна инвертерска технологија: Сплит 
-                системи, мултисплит, VRV, рекуператори на топлина, топлински 
+                <p>Во производната програма на Cooper & Hunter ја има целата
+                палета на клима уреди со врвна инвертерска технологија: Сплит
+                системи, мултисплит, VRV, рекуператори на топлина, топлински
                 пумпи воздух-вода во сплит изведба, кои работат ефикасно до -20 ˚С,
-                топлински пумпи воздух-вода наменети само за греење, со подготовка 
-                на вода до 60˚С, кои работат до –26˚С, одвлажнувачи. Производите се дизајнирани за работа при ниски надворешни температури 
-                до -30˚С и се најпродаван докажан бренд во Северна Америка, Канада и 
-                Северна Европа. WI-FI конекција и управување преку мобилен телефон од 
-                било која локација со Интернет пристап. Енергетска класа при ладење и 
+                топлински пумпи воздух-вода наменети само за греење, со подготовка
+                на вода до 60˚С, кои работат до –26˚С, одвлажнувачи. Производите се дизајнирани за работа при ниски надворешни температури
+                до -30˚С и се најпродаван докажан бренд во Северна Америка, Канада и
+                Северна Европа. WI-FI конекција и управување преку мобилен телефон од
+                било која локација со Интернет пристап. Енергетска класа при ладење и
                 греење до А+++. </p>
             </div>
             <div class="col-2">
@@ -49,7 +81,7 @@
             </div>
         </div>
        </div>
-       
+
        <div class="container">
         <h2 class="title">Палета на клима уреди</h2>
             <div class="small-container">
@@ -63,7 +95,7 @@
                     <div class="col-3">
                         <img src="product3.jpg">
                     </div>
-                 <small style="text-align: center; color: #555;"><i>Mini Split Heat Pump Air Conditioner System</i></small> 
+                 <small style="text-align: center; color: #555;"><i>Mini Split Heat Pump Air Conditioner System</i></small>
                 </div>
                 <button class="btn">Види повеќе &#8594;</button>
             </div>
@@ -72,23 +104,23 @@
        <div class="technology">
         <div class="small-container">
             <div class="features">
-                <p><i>Производите се дизајнирани за работа при ниски надворешни температури 
-                    до -30˚С и се најпродаван докажан бренд во Северна Америка, Канада и 
+                <p><i>Производите се дизајнирани за работа при ниски надворешни температури
+                    до -30˚С и се најпродаван докажан бренд во Северна Америка, Канада и
                     Северна Европа.</i>
                 </p>
                 <br>
                 <hr>
                 <br>
-                <p><i>Иновативните двостепени компресори ја овозможуваат нивната 
+                <p><i>Иновативните двостепени компресори ја овозможуваат нивната
                     ефикасна работа во режим на греење и на -30 ˚С.</i>
                 </p>
                 <br>
                 <hr>
                 <br>
-                <p><i>WI-FI конекција и управување преку мобилен телефон од било која 
+                <p><i>WI-FI конекција и управување преку мобилен телефон од било која
                     локација со Интернет пристап.</i></p>
             </div>
-        
+
         </div>
        </div>
 
@@ -100,7 +132,7 @@
                     <!--<p style="font-size: 50px;">&#10112;<p>-->
                         <img src="inovation/filter.png" width="40px">
                     <p>ВКЛУЧЕН СТАНДАРДЕН ФИЛТЕР</p>
-                    
+
                 </div>
                 <div class="col-4">
                     <!----<p style="font-size: 50px;">&#10113;</p>---->
@@ -120,13 +152,13 @@
             </div>
             <div class="row">
                 <div class="col-4">
-                   <!--<p style="font-size: 50px;">&#10116;<p>--> 
+                   <!--<p style="font-size: 50px;">&#10116;<p>-->
                     <img src="inovation/battery.png" width="40px">
                     <p>ИНВЕРТЕР ТЕХНОЛОГИЈА</p>
-                    
+
                 </div>
                 <div class="col-4">
-                   <!---<p style="font-size: 50px;">&#10117;</p>--> 
+                   <!---<p style="font-size: 50px;">&#10117;</p>-->
                    <img src="inovation/synchronize.png" width="40px">
                     <p>АВТОМАТСКО РЕСТАРТИРАЊЕ</p>
                 </div>
@@ -160,7 +192,7 @@
                     <div class="col-3">
                         <p style="font-size: 50px;">&#10114;</p>
                         <p><i>Во повеќе од 50 земји</i></p>
-                    
+
                     </div>
                 </div>
                 <video width="100%" controls class="videoo">
@@ -169,7 +201,7 @@
 
             </div>
        </div>
-
+       </div>
        <!----------footer----------->
        <div class="footer">
         <div class="container">
@@ -178,7 +210,7 @@
                     <h3>Преземете ја нашата апликација</h3>
                     <p>За Android и ISO мобилни телефони</p>
                     <div class="app-logo">
-                       <a href="https://play.google.com/store/apps/details?id=com.cooper_hunter.service&hl=ru&gl=US&pli=1" target="_blank"><img src="footer/play-store.png"></a> 
+                       <a href="https://play.google.com/store/apps/details?id=com.cooper_hunter.service&hl=ru&gl=US&pli=1" target="_blank"><img src="footer/play-store.png"></a>
                         <a href="https://apps.apple.com/us/app/cooper-hunter-tech-support/id1606815309" target="_blank"><img src="footer/app-store.png"></a>
                     </div>
                 </div>
@@ -186,7 +218,7 @@
                 <div class="footer-col-2">
                     <img src="logo.png">
                 </div>
-                 
+
                 <div class="footer-col-3">
                     <h3>Корисни линкови</h3>
                     <ul>
@@ -203,19 +235,19 @@
                         <span><a href="https://www.instagram.com/cooperandhunterusa/" target="_blank"><img src="footer/instagram.png"></a></span>
                         <span><a href="https://twitter.com/cooperhunterusa" target="_blank"><img src="footer/twitter (1).png"></a></span>
                     </div>
-          
-                        
-                    
-    
+
+
+
+
                 </div>
 
             </div>
             <hr>
-            <p class="copyright">&#169;	Copyright 2023 - Cooper&Hunte</p>
+            <p class="copyright">&#169;	Copyright 2023 - Cooper&Hunter</p>
         </div>
        </div>
 
-      
+
     <!----------script---------->
     <script>
         function openNav(){
@@ -228,6 +260,5 @@
     </script>
 
 
-</div>
     </body>
 </html>
