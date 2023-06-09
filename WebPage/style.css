@@ -11,6 +11,11 @@ body{
 
 /*---------menu----------*/
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700');
+*{
+    margin: 0;
+    padding: 0;
+}
 .menu{
     padding: 80px 20px;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -54,6 +59,7 @@ body{
 .menu a:hover::before{
     transform: scale3d(1,1,1);
 }
+
 .menu-5 a::before{
     background: #E91E63;
     transform-origin: 0 50%;
