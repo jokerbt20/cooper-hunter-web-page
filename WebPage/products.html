@@ -5,19 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cooper-Hunter | Product Page</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
        <div class="header">
         <!---------menu------------>
-           <nav class="menu menu-5">
-               <ul>
-                   <li><a href="#">Дома</a></li>
-                   <li><a href="#">За нас</a></li>
-                   <li><a href="#">Продукти</a></li>
-                   <li><a href="#">Контакт</a></li>
-               </ul>
-           </nav>
+
+        <nav class="menu menu-5">
+            <ul>
+                <li><a href="index.html">Дома</a></li>
+                <li><a href="about.html">За нас</a></li>
+                <li><a href="products.html">Продукти</a></li>
+                <li><a href="contact.html">Контакт</a></li>
+            </ul>
+        </nav>
+
        </div>
        <div class="container">
         <h2 class="title">Продукти</h2>
@@ -26,31 +29,225 @@
                 <div class="col-3">
                     <img src="../Documents/WebPage/Products/Arctic NG Series/ezgif-2-4e92e8d090.jpg" height="180px">
                     <p style="text-align: center; color: #555;">Цена: 17.990 ден.</p>
-                   <button style="width: 50%;" class="btn2">Повеќе</button><button style="width: 50%;" class="btn2">Нарачај</button>
+                   <button style="width: 50%;" class="btn2 popupButton" data-target="popup1">Повеќе</button><button style="width: 50%;" class="btn2">Нарачај</button>
                 </div>
                 <div class="col-3">
                     <img src="../Documents/WebPage/Products/Arctic NG Series/ezgif-2-8434776e41.jpg">
                     <p style="text-align: center; color: #555;">Цена: 18.990 ден.</p>
-                    <button style="width: 50%;" class="btn2">Повеќе</button><button style="width: 50%;" class="btn2">Нарачај</button>
+                    <button style="width: 50%;" class="btn2 popupButton" data-target="popup1">Повеќе</button><button style="width: 50%;" class="btn2">Нарачај</button>
                 </div>
                 <div class="col-3">
                     <img src="../Documents//WebPage/Products/Arctic NG Series/alpha-ng.png">
                     <p style="text-align: center; color: #555;">Цена: 19.990 ден.</p>
-                    <button style="width: 50%;" class="btn2">Повеќе</button><button style="width: 50%;" class="btn2">Нарачај</button>
+                    <button style="width: 50%;" class="btn2 popupButton" data-target="popup1">Повеќе</button><button style="width: 50%;" class="btn2">Нарачај</button>
                 </div>
              <small style="text-align: center; color: #555;"><i>Artic NG Series (ALPHA)</i></small> 
+
+             <div id="popup1" class="popupContainer">
+                <button class="closeButton">X</button>
+                <div class="popupContent">
+                  <p style="font-size: 25px; text-align: center;"><b>Квалитетна инвертер топлинска пумпа во сплит изведба </b></p>
+                  <br>
+                        <ul style="font-size: 13px; margin-left: 45px; list-style: circle;">
+                            <li>Eколошки фреон R32</li>
+                            <li>Работен режим од -15°С до +48°С со класа А++ на ладење и греење</li>
+                            <li>Wi-Fi конекција и управување</li>
+                            <li>G – MATRIK технологија за мирна и стабилна работа</li>
+                            <li>Ниско ниво на бучава</li>
+                            <li>Ладење од -15°С до +48°С</li>
+                            <li>Греење од -15°С до +24°С</li>
+                            <li>CH 7-SKY напреден систем на филтрација </li>
+                        </ul>
+                    <br>
+                    <hr style="width: 70%; margin-left: 65px;">
+                    <br>
+                    <p style="font-size: 20px; text-align: center; color: #2c2c2c;"><i>ГАРАНЦИЈА: 3 ГОДИНИ</i></p>
+                </div>
+              </div>
             </div>
+            <br>
+            <div class="row">
+                <div class="col-3">
+                    <img src="../Documents/WebPage/Products/Arctic Series/arctic-inverter_small.jpg">
+                    <p style="text-align: center; color: #555;">Цена: 15.990 ден.</p>
+                   <button style="width: 50%;" class="btn2 popupButton" data-target="popup2">Повеќе</button><button style="width: 50%;" class="btn2">Нарачај</button>
+                </div>
+                <div class="col-3">
+                    <img src="../Documents/WebPage/Products/Consol Inverter/consol.jpg" height="315px">
+                    <p style="text-align: center; color: #555;">Цена: 21.990 ден.</p>
+                    <button style="width: 50%;" class="btn2 popupButton" data-target="popup2">Повеќе</button><button style="width: 50%;" class="btn2">Нарачај</button>
+                </div>
+                <div class="col-3">
+                    <img src="../Documents//WebPage/Products/Consol Inverter/consol-small.jpg" height="315px">
+                    <p style="text-align: center; color: #555;">Цена: 22.990 ден.</p>
+                    <button style="width: 50%;" class="btn2 popupButton" data-target="popup2">Повеќе</button><button style="width: 50%;" class="btn2">Нарачај</button>
+                </div>
+             <small style="text-align: center; color: #555;"><i>Artic Series and Consol Inverter</i></small> 
+
+             <div id="popup2" class="popupContainer">
+                <button class="closeButton">X</button>
+                <div class="popupContent">
+                    <p style="font-size: 25px; text-align: center;"><b>Квалитетна инвертер топлинска пумпа во сплит изведба </b></p>
+                    <br>
+                    <ul style="font-size: 13px; margin-left: 45px; list-style: circle;">
+                        <li>CH 7-SKY напреден систем на филтрација</li>
+                        <li>Работен режим од -25°С до +48°С со класа А++ на ладење и греење</li>
+                        <li>Wi-Fi конекција и управување</li>
+                        <li>G – MATRIK технологија за мирна и стабилна работа</li>
+                        <li>Ниско ниво на бучава</li>
+                        <li>Работи на напон од 96V до 260V</li>
+                        <li>Ноќен режим Sleep (Consol Inverter)</li>
+                        <li>24 часовен тајмер (Consol Inverter)</li>
+                        <li>Енергетска класа А++ (Consol Inverter)</li>
+                        <li>Интелегентен дефрост (Consol Inverter)</li>
+                    </ul>
+                    <br>
+                    <hr style="width: 70%; margin-left: 65px;">
+                    <br>
+                    <p style="font-size: 20px; text-align: center; color: #2c2c2c;"><i>ГАРАНЦИЈА: 3 ГОДИНИ</i></p>
+
+                </div>
+              </div>
+            </div>
+
+        </div>
+       </div>
+
+       <div class="product_banner">
+        <div class="small-container">
+            <h1>Cooper & Hunter</h1>
+                <p>Кога ќе ги изберете производите на Cooper&Hunter за вашиот дом или бизнис,<br> добивате професионална техничка поддршка 
+                    од нашите експерти oбучени во областна на греење и ладење.</p>
+        </div>
+        </div>
+
+        <div class="review">
+            <h2 class="title">Задоволни клиенти</h2>
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-3">
+                        <i class="fa fa-quote-left"></i>
+                    <p>Апсолутно го обожавам новиот уред! Обезбедува извонредно ладење, 
+                        претворајќи ги топлите денови во освежителни моменти. Новите карактеристики 
+                        и способностите за заштеда на енергија ја прават вредна секоја инвестиција!
+                    </p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <img src="customer1.jpg">
+                    <h3>Маја Донева</h3>
+                    </div>
+                    <div class="col-3">
+                        <i class="fa fa-quote-left"></i>
+                        <p>Работењето на уредот е тивко, што ми овозможува мирно да спијам ноќе. 
+                            Паметните карактеристики и далечинскиот управувач го прават супер погодно 
+                            да ја прилагодам температурата од каде било во просторијата. Не можев да бидам посреќен!
+                        </p>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <img src="customer2.jpg">
+                        <h3>Петар Иванов</h3>
+                    </div>
+                    <div class="col-3">
+                        <i class="fa fa-quote-left"></i>
+                        <p>Воодушевенa сум од мојот нов клима уред! Брзо се лади, создава смирувачки амбиент 
+                           кој се совпаѓа со мојот декор и ги намалува трошоците за струја. Силно го препорачувам за неговите исклучителни 
+                            перформанси и ефикасност!
+                        </p>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <img src="customer3.jpg">
+                        <h3>Ирена Димитровска</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+       <!-----------footer---------->
+       <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Преземете ја нашата апликација</h3>
+                    <p>За Android и ISO мобилни телефони</p>
+                    <div class="app-logo">
+                       <a href="https://play.google.com/store/apps/details?id=com.cooper_hunter.service&hl=ru&gl=US&pli=1" target="_blank"><img src="footer/play-store.png"></a> 
+                        <a href="https://apps.apple.com/us/app/cooper-hunter-tech-support/id1606815309" target="_blank"><img src="footer/app-store.png"></a>
+                    </div>
+                </div>
+
+                <div class="footer-col-2">
+                    <img src="logo.png">
+                </div>
+                 
+                <div class="footer-col-3">
+                    <h3>Корисни линкови</h3>
+                    <ul>
+                        <li><a href="">За нас</a></li>
+                        <li><a href="">Контакт</a></li>
+                        <li><a href="">Производи</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Социјални мрежи</h3>
+                    <div>
+                        <span><a href="https://www.facebook.com/cooperandhunterusa" target="_blank"><img src="footer/facebook.png"></a></span>
+                        <span><a href="https://www.instagram.com/cooperandhunterusa/" target="_blank"><img src="footer/instagram.png"></a></span>
+                        <span><a href="https://twitter.com/cooperhunterusa" target="_blank"><img src="footer/twitter (1).png"></a></span>
+                    </div>
+          
+                        
+                    
+    
+                </div>
+
+            </div>
+            <hr>
+            <p class="copyright">&#169;	Copyright 2023 - Cooper&Hunte</p>
         </div>
        </div>
 
 
        <script>
-        function openNav(){
-            document.getElementById("mySidenav").style.width = "250px";
+
+                  
+        const popupButtons = document.getElementsByClassName('popupButton');
+        const closeButtons = document.getElementsByClassName('closeButton');
+
+        
+        for (let i = 0; i < popupButtons.length; i++) {
+        popupButtons[i].addEventListener('click', function() {
+            const target = popupButtons[i].getAttribute('data-target');
+            const popupContainer = document.getElementById(target);
+            popupContainer.style.display = 'block';
+        });
         }
-        function closeNav(){
-            document.getElementById("mySidenav").style.width = "0";
+
+        
+        for (let i = 0; i < closeButtons.length; i++) {
+        closeButtons[i].addEventListener('click', function() {
+            const popupContainer = closeButtons[i].parentNode;
+            popupContainer.style.display = 'none';
+        });
         }
+
+
 
     </script>
     </body>
