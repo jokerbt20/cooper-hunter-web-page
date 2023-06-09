@@ -5,55 +5,65 @@
 }
 body{
     font-family: 'Poppins', sans-serif;
-    height: 3000px;
-}
-
-
-.header{
-    background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url(../Documents/WebPage/banner.jpg);
-    background-size: cover;
-    background-position:center;
-    height: 40vh;
-    width: 100%;
-    position: relative;
-    
 }
 
 
 
 /*---------menu----------*/
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
+
+.menu{
+    padding: 80px 20px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.menu-1, .menu-5{
+    background: #004B91;
+}
+
+
+.menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.menu li{
+    display: inline-block;
+    margin: 0 15px;
+}
+.menu a{
+    font-size: 22px;
+    text-transform: uppercase;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+    color: #fff;
     display: block;
-    transition: 0.3s;
-  }
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-  .sidenav .closebtn {
+    position: relative;
+    padding: 4px 0;
+}
+.menu a::before{
+    content: "";
+    width: 100%;
+    height: 4px;
     position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    transition: 0.5s transform ease;
+    transform: scale3d(0,1,1);
+    transform-origin: 0 50%;
+}
+.menu a:hover::before{
+    transform: scale3d(1,1,1);
+}
+.menu-5 a::before{
+    background: #E91E63;
+    transform-origin: 0 50%;
+}
+.menu-5 a:hover::before{
+    transform-origin: 100% 50%;
+}
+
+
+
   /*----------content---------*/
   .container{
     max-width: 1300px;
@@ -86,6 +96,7 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .col-2{
     flex-basis: 50%;
     max-width: 500px;
@@ -276,6 +287,145 @@ body{
 .btn2:hover{
     background: #ff2007;
 }
+.characteristics{
+    border:  solid #555;
+}
+.popupContainer {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #3e648b;
+    padding: 20px;
+    z-index: 9999;
+    width: 500px;
+    height: 500px;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .popupContent {
+    color: #fff;
+  }
+  .product_banner{
+    height:100vh;
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(product_banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    margin-top: 100px;
+    padding: 30px 0;
+    color: #fff;
+  }
+  .product_banner h1{
+    margin-top: 200px;
+    font-size: 50px;
+  }
+
+
+.review .col-3{
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.review .col-3 img{
+    width: 70px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+.review .col-3:hover{
+    transform: translateY(-10px);
+
+}
+.fa.fa-quote-left{
+    font-size: 34px;
+    color: #ff2007;
+}
+.rating{
+    color:#004B91;
+}
+.col-3 p{
+    font-size: 12px;
+    margin: 12px 0;
+    color: #777;
+}
+.review .col-3 h3{
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+/*--------------aboutUs--------------*/
+.about_banner{
+    height:530px;
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(aboutus_banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    margin-top: 100px;
+    padding: 30px 0;
+    color: #fff;
+}
+.about_banner .col-3{
+    margin-top: 400px;
+    background-color:#1C85E7;
+    padding: 40px 20px;
+}
+.about_banner .col-3 h2{
+    text-align: center;
+    color: #ff2007;
+}
+.about_banner .col-3 p{
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+.fa.fa-bullseye{
+    font-size: 34px;
+    color: #ff2007;
+    margin-left: 120px;
+}
+.fa.fa-rocket{
+    font-size: 34px;
+    color: #ff2007;
+    margin-left: 120px;
+}
+.fa.fa-area-chart{
+    font-size: 34px;
+    color: #ff2007;
+    margin-left: 120px;
+}
+.about_content .col-2 img{
+    border-radius: 0%;
+    width: 100%;
+    filter: opacity(0.6) drop-shadow(0 0 #004B91);
+
+}
+
+.col-1{
+    display: flex;
+}
+.projects .col-1 img{
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    height: 300px;
+    filter: opacity(0.6) drop-shadow(0 0 #004B91);
+}
+
 
 
 
