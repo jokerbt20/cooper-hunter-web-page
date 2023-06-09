@@ -1,27 +1,46 @@
 *{
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
+
 }
-body{
+body {
     font-family: 'Poppins', sans-serif;
     height: 3000px;
+    background: whitesmoke;
+}
+.left
+{
+    height: 400px;
+    width: 1900px;
+    background-image: url("../Documents/WebPage/Home/logoto1.gif");
+    position: absolute;
+    z-index: -1;
+    opacity: 10%;
+    margin-left: -400px;
+
 }
 
-
-.header{
-    background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url(../Documents/WebPage/banner.jpg);
-    background-size: cover;
-    background-position:center;
-    height: 40vh;
-    width: 100%;
-    position: relative;
-    
+#weatherContainer
+{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0px;
+    left: 0px;
 }
 
-
+#slikaLogoIndex {
+    background-image: url("logoindex.png");
+    background-size: 90% auto;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 600px;
+    margin-left: 385px;
+    position: absolute;
+    margin-top: -110px;
+    display: flex;
+}
 
 /*---------menu----------*/
 
@@ -34,8 +53,8 @@ body{
     padding: 80px 20px;
     font-family: 'Open Sans Condensed', sans-serif;
 }
-.menu-1, .menu-5{
-    background: darkblue;
+.menu-5{
+    background: #004B91;
 }
 
 
@@ -75,19 +94,53 @@ body{
 }
 
 .menu-5 a::before{
-    background: #E91E63;
+    background: darkred;
     transform-origin: 0 50%;
 }
 .menu-5 a:hover::before{
     transform-origin: 100% 50%;
 }
-  /*----------content---------*/
-  .container{
-    max-width: 1300px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
+/*<----API------->*/
+#weatherContainer
+{
+    margin-top: -200px;
+    margin-left: 50px;
+    position: relative;
+    width: 300px;
+    background-repeat: no-repeat;
+
 }
+#temperature
+{
+    color: white;
+    font-size: 65px;
+    padding-top: 30px;
+    padding-left: 110px;
+    position: absolute;
+
+}
+#weatherDescriptionHeader {
+    font-size: 20px;
+    padding-left: 110px;
+    padding-top: 120px;
+    position: relative;
+    color: white;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+    height: 200px;
+    width: 300px;
+}
+
+/*<----API------->*/
+  /*----------content---------*/
+  .container {
+      max-width: 1300px;
+      margin: auto;
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-top: -500px;
+
+
+  }
 .title{
     text-align: center;
     margin: 50px auto 80px;
@@ -106,7 +159,10 @@ body{
     left: 50%;
     transform: translateX(-50%);
 }
-
+.small-container .features
+{
+    margin-left: -50px;
+}
 .row{
     display: flex;
     align-items: center;
@@ -169,8 +225,8 @@ body{
     padding: 30px 0;
 }
 .features{
-    width: 43%; 
-    margin-left: 700px; 
+    width: 43%;
+    margin-left: 700px;
     text-align: justify;
     margin-top: 170px;
 }
@@ -267,7 +323,7 @@ body{
     display: inline-block;
     cursor: pointer;
     filter:grayscale(100%);
-    
+
 }
 .footer-col-4 img:hover{
     filter: grayscale(0);
