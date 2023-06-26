@@ -7,22 +7,50 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="../APIs/API - Weather/script.js"></script>
     </head>
     <body>
-       <div class="header">
-        <!---------menu------------>
+           <div class="header" style="height: 30vh;">
+               <!---------menu------------>
+               <nav class="menu menu-5">
+                   <ul>
+                       <li><a href="index.html">Дома</a></li>
+                       <li><a href="about.html">За нас</a></li>
+                       <li><a href="products.html">Продукти</a></li>
+                       <li><a href="contact.html">Контакт</a></li>
+                   </ul>
+               </nav>
+               <!-------API weather-------->
+               <div id="weatherContainer">
+                   <div id="weatherDescription">
+                       <h1 id="cityHeader"></h1>
+                       <div id="weatherMain">
+                           <div id="temperature"></div>
+                           <div id="weatherDescriptionHeader"></div>
+                       </div>
+                       <div id="windSpeed" class="bottom-details"></div>
+                       <div id="humidity" class="bottom-details"></div>
+                   </div>
 
-        <nav class="menu menu-5">
-            <ul>
-                <li><a href="index.html">Дома</a></li>
-                <li><a href="about.html">За нас</a></li>
-                <li><a href="products.html">Продукти</a></li>
-                <li><a href="contact.html">Контакт</a></li>
-            </ul>
-        </nav> 
+                   <script src=".\APIs\API - Weather\script.js">
+                       if(navigator.geolocation) {
+                           navigator.geolocation.getCurrentPosition(function(position) {
+                               const lat = position.coords.latitude;
+                               const lon = position.coords.longitude;
+                               searchWeather(lat + ',' + lon);
+                           }, function(error) {
+                               // Error or user denies location, use the default location - Bitola
+                               searchWeather('Bitola, mk');
+                           });
+                       } else {
+                           // If geolocation is not supported, use the default location
+                           searchWeather('Bitola, mk');
+                       }
 
-        
-       </div>
+                   </script>
+               </div>
+           </div>
+           <!-------API weather-------->
 
       <div class="container">
             <h2 class="title">За нас</h2>
