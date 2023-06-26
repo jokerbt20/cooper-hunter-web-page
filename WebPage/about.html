@@ -52,6 +52,26 @@
            </div>
            <!-------API weather-------->
 
+                   <script src=".\APIs\API - Weather\script.js">
+                       if(navigator.geolocation) {
+                           navigator.geolocation.getCurrentPosition(function(position) {
+                               const lat = position.coords.latitude;
+                               const lon = position.coords.longitude;
+                               searchWeather(lat + ',' + lon);
+                           }, function(error) {
+                               // Error or user denies location, use the default location - Bitola
+                               searchWeather('Bitola, mk');
+                           });
+                       } else {
+                           // If geolocation is not supported, use the default location
+                           searchWeather('Bitola, mk');
+                       }
+
+                   </script>
+               </div>
+           </div>
+           <!-------API weather-------->
+
       <div class="container">
             <h2 class="title">За нас</h2>
         </div>
