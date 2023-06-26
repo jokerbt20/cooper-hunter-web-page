@@ -6,7 +6,6 @@
 }
 body {
     font-family: 'Poppins', sans-serif;
-    height: 3000px;
     background: whitesmoke;
 }
 .left
@@ -463,7 +462,7 @@ body {
 }
 .about_banner .col-3 h2{
     text-align: center;
-    color: #ff2007;
+    color: #bd3e30;
 }
 .about_banner .col-3 p{
     font-size: 16px;
@@ -472,17 +471,17 @@ body {
 }
 .fa.fa-bullseye{
     font-size: 34px;
-    color: #ff2007;
+    color: #bd3e30;
     margin-left: 120px;
 }
 .fa.fa-rocket{
     font-size: 34px;
-    color: #ff2007;
+    color: #bd3e30;
     margin-left: 120px;
 }
 .fa.fa-area-chart{
     font-size: 34px;
-    color: #ff2007;
+    color: #bd3e30;
     margin-left: 120px;
 }
 .about_content .col-2 img{
@@ -503,7 +502,92 @@ body {
     height: 300px;
     filter: opacity(0.6) drop-shadow(0 0 #004B91);
 }
+/*----------contact---------*/
 
+.containerMain{
+    position: relative;
+    /*border: 1px solid saddlebrown;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 100px;
+}
+.containerMain::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+   /* background: url("poz1.jpeg") no-repeat center;*/
+    background-size: cover;
+    z-index: -1;
+    filter: blur(90px);
+}
+.container-box{
+    max-width: 980px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 19px 5px ;
+    border-radius: 15px;
+}
+
+.container-box img{
+    width: 350px;
+    height: 350px;
+    margin-left: 20px;
+    background-repeat: no-repeat; 
+    border-radius: 0%;
+}
+.container-box .col-2:last-child{
+    padding: 25px 40px;
+    margin-right: 20px;
+}
+
+
+.container-box h1{
+    position: relative;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+.container-box h1::after{
+    content: "";
+    position:absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 380px;
+    border-radius: 9px;
+    background-color: rgb(138, 27, 27);
+}
+.container-box .btn{
+   margin-left: -0px;
+}
+.field{
+    width: 100%;
+    background-color: rgb(237, 230, 230);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    transition: .3s;
+}
+.field:hover{
+    background-color: rgba(12, 11, 11, 0.335);
+}
+
+.field:focus{
+    background-color: #fff;
+    border: 2px;
+}
+.area{
+    min-height: 150px;
+}
 
 
 
