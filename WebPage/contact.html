@@ -1,68 +1,159 @@
 
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cooper-Hunter | Contact Page</title>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-       <div class="header">
-        <!---------menu------------>
-           <nav class="menu menu-5">
-               <ul>
-                   <li><a href="#">Дома</a></li>
-                   <li><a href="#">За нас</a></li>
-                   <li><a href="#">Продукти</a></li>
-                   <li><a href="#">Контакт</a></li>
-               </ul>
-           </nav>
-       </div>
-       <div class="container">
-            <h2 class="title">Контакт</h2>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контактирај не</title>
-    <link rel="stylesheet" type="text/css" href="contact.css">
+    <title>Cooper-Hunter | Contact Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("naTqsILqXE9A5wy59");
+        })();
+
+        function sendMail(){
+            var params={
+                name:document.getElementById("name").value,
+                surname:document.getElementById("surname").value,
+                email:document.getElementById("email").value,
+                phone:document.getElementById("phone").value,
+                message:document.getElementById("message").value,
+            };
+            const serviceID="service_py1gzkv";
+            const templateID="template_ir4wfkn";
+
+            emailjs.send(serviceID,templateID,params)
+                .then(
+                    (res)=>{
+                        document.getElementById("name").value="";
+                        document.getElementById("surname").value="";
+                        document.getElementById("email").value="";
+                        document.getElementById("phone").value="";
+                        document.getElementById("message").value="";
+                        console.log(res);
+                        alert("your message sent successfully");
+                    }
+                )
+                .catch((err)=>console.log(err));
+        }
+
+    </script>
+    <script src="../APIs/API - Weather/script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="container-box">
-            <div class="left">
-                <img src="logo.jpeg" class="sl"/>
+<div class="header" style="height: 30vh;">
+    <!---------menu------------>
+    <nav class="menu menu-5">
+        <ul>
+            <li><a href="index.html">Дома</a></li>
+            <li><a href="about.html">За нас</a></li>
+            <li><a href="products.html">Продукти</a></li>
+            <li><a href="contact.html">Контакт</a></li>
+        </ul>
+    </nav>
+    <!-------API weather-------->
+    <div id="weatherContainer">
+        <div id="weatherDescription">
+            <h1 id="cityHeader"></h1>
+            <div id="weatherMain">
+                <div id="temperature"></div>
+                <div id="weatherDescriptionHeader"></div>
             </div>
-            <div class="right">
-                <h1>Контактирај не овде</h1>
-                <div class="form">
-                    <input type="text" class="field" id="name" placeholder="Име: ">
+            <div id="windSpeed" class="bottom-details"></div>
+            <div id="humidity" class="bottom-details"></div>
+        </div>
+
+        <script src=".\APIs\API - Weather\script.js">
+            if(navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    searchWeather(lat + ',' + lon);
+                }, function(error) {
+                    // Error or user denies location, use the default location - Bitola
+                    searchWeather('Bitola, mk');
+                });
+            } else {
+                // If geolocation is not supported, use the default location
+                searchWeather('Bitola, mk');
+            }
+
+        </script>
+    </div>
+</div>
+<!-------API weather-------->
+<div class="containerMain">
+    <div class="container-box">
+        <div class="col-2">
+            <img src="logo.jpeg" alt="slika" class="sl"/>
+        </div>
+        <div class="col-2">
+            <h1>Контактирај нѐ овде</h1>
+            <div class="form">
+                <input type="text" class="field" id="name" placeholder="Име: ">
                 <input type="text" class="field" id="surname" placeholder="Презиме: ">
                 <input type="email" class="field" id="email" placeholder="Е-маил: ">
                 <input type="text" class="field" id="phone" placeholder="Телефон: ">
                 <textarea type="text" class="field" id="message" placeholder="Остави порака: "></textarea>
-                <button class="btn" id="submit">Прати</button>
-                </div>
-                
+
+                <button class="btn" onclick="sendMail()">Прати</button>
+
             </div>
-            <script src="https://smtpjs.com/v3/smtp.js">
-                </script>
-                <script>
-                    Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "anajovcevska7@gmail.com",
-            Password : "F93CD9AFB8FBC5A4967EF3E72612485B771A",
-            To : 'anagogo@live.co.uk',
-            From : document.getElementById('email').value,
-            Subject : "This is the subject",
-            Body : "And this is the body"
-            }).then(
-            message => alert(message)
-            );
-                </script>
-          </script>
+
+        </div>
+
+    </div>
+</div>
+
+<footer>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Преземете ја нашата апликација</h3>
+                    <p>За Android и ISO мобилни телефони</p>
+                    <div class="app-logo">
+                        <a href="https://play.google.com/store/apps/details?id=com.cooper_hunter.service&hl=ru&gl=US&pli=1" target="_blank"><img src="footer/play-store.png"></a>
+                        <a href="https://apps.apple.com/us/app/cooper-hunter-tech-support/id1606815309" target="_blank"><img src="footer/app-store.png"></a>
+                    </div>
+                </div>
+
+                <div class="footer-col-2">
+                    <img src="logo.png">
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Корисни линкови</h3>
+                    <ul>
+                        <li><a href="about.html">За нас</a></li>
+                        <li><a href="contact.html">Контакт</a></li>
+                        <li><a href="products.html">Производи</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Социјални мрежи</h3>
+                    <div>
+                        <span><a href="https://www.facebook.com/cooperandhunterusa" target="_blank"><img src="footer/facebook.png"></a></span>
+                        <span><a href="https://www.instagram.com/cooperandhunterusa/" target="_blank"><img src="footer/instagram.png"></a></span>
+                        <span><a href="https://twitter.com/cooperhunterusa" target="_blank"><img src="footer/twitter (1).png"></a></span>
+                    </div>
+
+                </div>
+
+            </div>
+            <hr>
+            <p class="copyright">&#169;	Copyright 2023 - Cooper&Hunte</p>
         </div>
     </div>
+
+
+</footer>
 </body>
+
 </html>
